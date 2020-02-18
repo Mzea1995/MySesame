@@ -1,0 +1,28 @@
+{
+    "name": "MySesame",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Controla tu saldo horario en Sesametime.",
+    "author": "Manuel Zea Roldán",
+    
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_title": "MySesame",
+        "default_icon": "assets/img/icon.png",
+        "default_popup": "assets/templates/popup.html"
+    },
+    "content_scripts": [ {
+        "matches": [
+            "<all_urls>"
+        ],
+        "css": ["assets/css/mySesame.css"],
+        "js": ["assets/js/mySesame.js"],
+        "run_at": "document_idle"
+    } ],
+    "web_accessible_resources": [
+        "assets/img/icon.png"
+    ]
+}

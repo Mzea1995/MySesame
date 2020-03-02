@@ -1,8 +1,3 @@
-window.onload = function() {
-    var button = document.getElementById('click');
-    button.addEventListener('click', myAlert);
-}
+var user= document.querySelector('body').dataset.user;
 
-function myAlert() {
-    alert('hola');
-}
+alert(user);

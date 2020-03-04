@@ -2,8 +2,10 @@ var cookie= getCookie();
 
 console.log(cookie)
 if (cookie) {
-    var html = getHours(cookie);
-    console.log(html)
+    getHours(cookie)
+    .then((html) => {
+       console.log(html); 
+    });
 }
 
 function getCookie() {
